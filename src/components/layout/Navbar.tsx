@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -20,14 +21,21 @@ export default function Navbar() {
     e.preventDefault();
     setIsOpen(false);
 
-    // If we're not on the home page, navigate there first
+    // If we're not on the home page, navigate to home first
     if (location.pathname !== '/') {
-      window.location.href = `/${sectionId}`;
+      navigate('/');
+      // Wait for navigation to complete before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
       return;
     }
 
-    // Find the section and scroll to it
-    const element = document.getElementById(sectionId.replace('#', ''));
+    // If we're already on the home page, just scroll
+    const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
