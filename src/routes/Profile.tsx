@@ -13,7 +13,7 @@ export default function Profile() {
           <div className="overflow-hidden rounded-2xl bg-gray-50 shadow-xl">
             <div className="relative aspect-[16/9] w-full">
               <img
-                src="/aha-realestate-website/images/eng_ahmed_husse.jpg"
+                src="./images/eng_ahmed_husse.jpg"
                 alt="Engineer Ahmed Husse Ahmed"
                 className="absolute inset-0 h-full w-full object-cover"
               />
@@ -24,7 +24,7 @@ export default function Profile() {
               <div className="flex items-start gap-6">
                 <div className="relative h-32 w-32 overflow-hidden rounded-xl border-4 border-[#0095FF] shadow-lg">
                   <img
-                    src="/aha-realestate-website/images/eng_ahmed_husse.jpg"
+                    src="./images/eng_ahmed_husse.jpg"
                     alt="Engineer Ahmed Husse Ahmed"
                     className="h-full w-full object-cover"
                   />
