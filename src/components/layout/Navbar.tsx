@@ -67,14 +67,14 @@ export default function Navbar() {
         {isOpen && (
           <>
             <div 
-              className="fixed inset-0 bg-black/50 md:hidden" 
+              className="fixed inset-0 bg-black/50 md:hidden z-40" 
               onClick={() => setIsOpen(false)}
             />
             <motion.div 
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="absolute inset-x-0 top-full bg-[#0095FF] p-4 md:hidden"
+              className="absolute inset-x-0 top-full bg-[#0095FF] p-4 md:hidden z-50"
             >
               <div className="flex flex-col gap-4">
                 <Link to="/" className="text-white hover:text-white/80" onClick={() => setIsOpen(false)}>
