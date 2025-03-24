@@ -1,10 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isOpen]);
 
   return (
     <header className="sticky top-0 z-50 bg-[#0095FF] shadow-lg">
@@ -54,33 +63,45 @@ export default function Navbar() {
           )}
         </button>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation Overlay */}
         {isOpen && (
-          <div className="absolute inset-x-0 top-full bg-[#0095FF] p-4 md:hidden">
-            <div className="flex flex-col gap-4">
-              <Link to="/" className="text-white hover:text-white/80">
-                Home
-              </Link>
-              <a href="#about" className="text-white hover:text-white/80">
-                About
-              </a>
-              <a href="#services" className="text-white hover:text-white/80">
-                Services
-              </a>
-              <a href="#projects" className="text-white hover:text-white/80">
-                Projects
-              </a>
-              <a href="#contact" className="text-white hover:text-white/80">
-                Contact
-              </a>
-              <Link 
-                to="/profile" 
-                className="rounded-full bg-white px-4 py-2 text-center text-[#0095FF] hover:bg-white/90"
-              >
-                Meet our Chief Engineer
-              </Link>
-            </div>
-          </div>
+          <>
+            <div 
+              className="fixed inset-0 bg-black/50 md:hidden" 
+              onClick={() => setIsOpen(false)}
+            />
+            <motion.div 
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="absolute inset-x-0 top-full bg-[#0095FF] p-4 md:hidden"
+            >
+              <div className="flex flex-col gap-4">
+                <Link to="/" className="text-white hover:text-white/80" onClick={() => setIsOpen(false)}>
+                  Home
+                </Link>
+                <a href="#about" className="text-white hover:text-white/80" onClick={() => setIsOpen(false)}>
+                  About
+                </a>
+                <a href="#services" className="text-white hover:text-white/80" onClick={() => setIsOpen(false)}>
+                  Services
+                </a>
+                <a href="#projects" className="text-white hover:text-white/80" onClick={() => setIsOpen(false)}>
+                  Projects
+                </a>
+                <a href="#contact" className="text-white hover:text-white/80" onClick={() => setIsOpen(false)}>
+                  Contact
+                </a>
+                <Link 
+                  to="/profile" 
+                  className="rounded-full bg-white px-4 py-2 text-center text-[#0095FF] hover:bg-white/90"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Meet our Chief Engineer
+                </Link>
+              </div>
+            </motion.div>
+          </>
         )}
       </nav>
     </header>
