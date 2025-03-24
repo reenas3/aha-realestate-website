@@ -48,7 +48,7 @@ export default function Navbar() {
           <svg className="h-8 w-8 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M3 21H21M3 18H21M6 18V13M10 18V13M14 18V13M18 18V13M5 13H19C19.5523 13 20 12.5523 20 12V4C20 3.44772 19.5523 3 19 3H5C4.44772 3 4 3.44772 4 4V12C4 12.5523 4.44772 13 5 13Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          <span className="text-2xl font-bold">AHA Construction</span>
+          <span className="text-2xl font-bold"><span className="text-[#0095FF]">AHA</span> Construction</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -77,50 +77,99 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button
+        <motion.button
           onClick={() => setIsOpen(!isOpen)}
-          className="rounded-lg p-2 text-white hover:bg-white/10 md:hidden"
+          className="relative rounded-full p-2.5 text-white hover:bg-white/10 transition-colors duration-200 md:hidden"
+          whileTap={{ scale: 0.95 }}
+          animate={{
+            backgroundColor: isOpen ? 'rgba(255, 255, 255, 0.1)' : 'transparent',
+          }}
         >
           <span className="sr-only">Open menu</span>
-          {isOpen ? (
-            <XMarkIcon className="h-6 w-6" />
-          ) : (
-            <Bars3Icon className="h-6 w-6" />
-          )}
-        </button>
+          <div className="relative h-5 w-5">
+            <motion.span
+              className="absolute left-0 top-0 h-0.5 w-5 bg-white rounded-full"
+              animate={{
+                rotate: isOpen ? 45 : 0,
+                y: isOpen ? 10 : 0,
+              }}
+              transition={{ duration: 0.2 }}
+            />
+            <motion.span
+              className="absolute left-0 top-[10px] h-0.5 w-5 bg-white rounded-full"
+              animate={{
+                opacity: isOpen ? 0 : 1,
+                x: isOpen ? -20 : 0,
+              }}
+              transition={{ duration: 0.2 }}
+            />
+            <motion.span
+              className="absolute left-0 bottom-0 h-0.5 w-5 bg-white rounded-full"
+              animate={{
+                rotate: isOpen ? -45 : 0,
+                y: isOpen ? -10 : 0,
+              }}
+              transition={{ duration: 0.2 }}
+            />
+          </div>
+        </motion.button>
 
         {/* Mobile Navigation Overlay */}
         {isOpen && (
           <>
-            <div 
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               className="fixed inset-0 bg-black/50 md:hidden z-40" 
               onClick={() => setIsOpen(false)}
             />
             <motion.div 
-              initial={{ opacity: 0, y: -10 }}
+              initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              className="absolute inset-x-0 top-full bg-[#0095FF] p-4 md:hidden z-50"
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="absolute inset-x-0 top-full bg-[#0095FF] p-6 md:hidden z-50 shadow-lg"
             >
               <div className="flex flex-col gap-4">
-                <Link to="/" className="text-white hover:text-white/80" onClick={() => setIsOpen(false)}>
+                <Link 
+                  to="/" 
+                  className="text-white hover:text-white/80 transition-colors duration-200 text-lg" 
+                  onClick={() => setIsOpen(false)}
+                >
                   Home
                 </Link>
-                <a href="#about" className="text-white hover:text-white/80" onClick={(e) => handleNavClick(e, 'about')}>
+                <a 
+                  href="#about" 
+                  className="text-white hover:text-white/80 transition-colors duration-200 text-lg" 
+                  onClick={(e) => handleNavClick(e, 'about')}
+                >
                   About
                 </a>
-                <a href="#services" className="text-white hover:text-white/80" onClick={(e) => handleNavClick(e, 'services')}>
+                <a 
+                  href="#services" 
+                  className="text-white hover:text-white/80 transition-colors duration-200 text-lg" 
+                  onClick={(e) => handleNavClick(e, 'services')}
+                >
                   Services
                 </a>
-                <a href="#projects" className="text-white hover:text-white/80" onClick={(e) => handleNavClick(e, 'projects')}>
+                <a 
+                  href="#projects" 
+                  className="text-white hover:text-white/80 transition-colors duration-200 text-lg" 
+                  onClick={(e) => handleNavClick(e, 'projects')}
+                >
                   Projects
                 </a>
-                <a href="#contact" className="text-white hover:text-white/80" onClick={(e) => handleNavClick(e, 'contact')}>
+                <a 
+                  href="#contact" 
+                  className="text-white hover:text-white/80 transition-colors duration-200 text-lg" 
+                  onClick={(e) => handleNavClick(e, 'contact')}
+                >
                   Contact
                 </a>
                 <Link 
                   to="/profile" 
-                  className="rounded-full bg-white px-4 py-2 text-center text-[#0095FF] hover:bg-white/90"
+                  className="mt-2 rounded-full bg-white px-6 py-3 text-center text-[#0095FF] hover:bg-white/90 transition-colors duration-200 text-lg font-medium shadow-md hover:shadow-lg"
                   onClick={() => setIsOpen(false)}
                 >
                   Meet our Chief Engineer
