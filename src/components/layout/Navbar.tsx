@@ -48,7 +48,7 @@ export default function Navbar() {
           <svg className="h-8 w-8 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M3 21H21M3 18H21M6 18V13M10 18V13M14 18V13M18 18V13M5 13H19C19.5523 13 20 12.5523 20 12V4C20 3.44772 19.5523 3 19 3H5C4.44772 3 4 3.44772 4 4V12C4 12.5523 4.44772 13 5 13Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          <span className="text-2xl font-bold"><span className="text-[#0095FF]">AHA</span> Construction</span>
+          <span className="text-2xl font-bold"><span className="text-white font-black">AHA</span> Construction</span>
         </Link>
 
         {/* Desktop Navigation */}
