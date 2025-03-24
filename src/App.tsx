@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar'
 import Hero from './components/sections/Hero'
 import About from './components/sections/About'
@@ -7,11 +7,12 @@ import Projects from './components/sections/Projects'
 import Contact from './components/sections/Contact'
 import Footer from './components/layout/Footer'
 import Profile from './routes/Profile'
+import ComingSoon from './routes/ComingSoon'
 import './index.css'
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/aha-realestate-website">
       <Navbar />
       <Routes>
         <Route path="/" element={
@@ -33,6 +34,7 @@ export default function App() {
           </div>
         } />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/coming-soon" element={<ComingSoon />} />
       </Routes>
     </Router>
   )

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import {
   HomeIcon,
   BuildingOfficeIcon,
@@ -68,9 +69,9 @@ export default function Services() {
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
                   <p className="flex-auto">{service.description}</p>
                   <p className="mt-6">
-                    <a href="#contact" className="text-sm font-semibold leading-6 text-primary-600">
+                    <Link to="/coming-soon" className="text-sm font-semibold leading-6 text-primary-600">
                       Learn more <span aria-hidden="true">→</span>
-                    </a>
+                    </Link>
                   </p>
                 </dd>
               </motion.div>

@@ -26,7 +26,7 @@ const features = [
 
 export default function About() {
   return (
-    <div className="relative isolate overflow-hidden bg-white py-24 sm:py-32">
+    <div id="about" className="relative isolate overflow-hidden bg-white py-24 sm:py-32">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.primary.100),white)]" />
       
