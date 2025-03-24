@@ -1,68 +1,87 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer base {
+  html {
+    @apply scroll-smooth antialiased;
   }
-  a:hover {
-    color: #747bff;
+  
+  body {
+    @apply bg-white text-secondary-900 overflow-x-hidden font-sans;
   }
-  button {
-    background-color: #f9f9f9;
+
+  h1 {
+    @apply text-4xl font-black tracking-tight text-secondary-950 sm:text-5xl lg:text-6xl [text-wrap:balance];
+  }
+
+  h2 {
+    @apply text-3xl font-extrabold tracking-tight text-secondary-950 sm:text-4xl [text-wrap:balance];
+  }
+
+  h3 {
+    @apply text-2xl font-bold tracking-tight text-secondary-900 [text-wrap:balance];
+  }
+
+  h4 {
+    @apply text-xl font-bold tracking-tight text-secondary-900 [text-wrap:balance];
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply relative py-16 sm:py-24 lg:py-32;
+  }
+
+  .section-title {
+    @apply relative mb-12 text-3xl font-black tracking-tight text-secondary-950 sm:text-4xl after:absolute after:-bottom-4 after:left-0 after:h-1 after:w-12 after:rounded-full after:bg-primary-600 after:content-[''] [text-wrap:balance];
+  }
+
+  .section-subtitle {
+    @apply mt-8 text-lg leading-relaxed text-secondary-700 [text-wrap:balance];
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md bg-primary-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition duration-200;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-md border border-primary-600 bg-transparent px-6 py-3 text-base font-semibold text-primary-600 shadow-sm hover:bg-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition duration-200;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md bg-secondary-100 px-6 py-3 text-base font-semibold text-secondary-900 shadow-sm hover:bg-secondary-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-600 transition duration-200;
+  }
+
+  .link {
+    @apply relative inline-flex items-center gap-1 text-primary-600 font-medium hover:text-primary-700 transition-colors duration-200;
+  }
+
+  .card {
+    @apply relative overflow-hidden rounded-xl bg-white p-6 shadow-lg ring-1 ring-secondary-900/5 hover:shadow-xl transition duration-300;
+  }
+
+  .input {
+    @apply block w-full rounded-md border-0 px-4 py-3 text-secondary-900 shadow-sm ring-1 ring-inset ring-secondary-300 placeholder:text-secondary-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6;
+  }
+
+  .label {
+    @apply mb-2 block text-sm font-medium leading-6 text-secondary-900;
+  }
+
+  .glass-effect {
+    @apply bg-white/90 backdrop-blur-lg backdrop-saturate-150 border border-white/20;
+  }
+
+  .gradient-mask-b {
+    @apply [mask-image:linear-gradient(to_bottom,black_50%,transparent_100%)];
+  }
+
+  .gradient-mask-t {
+    @apply [mask-image:linear-gradient(to_top,black_50%,transparent_100%)];
   }
 }
