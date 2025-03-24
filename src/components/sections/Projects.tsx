@@ -76,7 +76,7 @@ export default function Projects() {
                 <img
                   src={project.imageUrl}
                   alt={project.title}
-                  className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2] border-2 border-primary-600"
+                  className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2] border-2 border-[#0095FF]"
                 />
                 <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
               </div>
