@@ -5,4 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/aha-realestate-website/',
+  build: {
+    assetsDir: 'assets',
+    copyPublicDir: true,
+  },
 })
