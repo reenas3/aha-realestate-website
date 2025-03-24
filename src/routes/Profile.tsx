@@ -14,7 +14,7 @@ export default function Profile() {
             <div className="relative aspect-[16/9] w-full">
               <img
                 src={`${import.meta.env.BASE_URL}images/eng_ahmed_husse.jpg`}
-                alt="Engineer Ahmed Husse Ahmed"
+                alt="Engineer Ahmed Hussen Ahmed"
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
@@ -25,12 +25,12 @@ export default function Profile() {
                 <div className="relative h-32 w-32 overflow-hidden rounded-xl border-4 border-[#0095FF] shadow-lg">
                   <img
                     src={`${import.meta.env.BASE_URL}images/eng_ahmed_husse.jpg`}
-                    alt="Engineer Ahmed Husse Ahmed"
+                    alt="Engineer Ahmed Hussen Ahmed"
                     className="h-full w-full object-cover"
                   />
                 </div>
                 <div className="mt-20">
-                  <h1 className="text-4xl font-bold text-gray-900">Eng. Ahmed Husse Ahmed</h1>
+                  <h1 className="text-4xl font-bold text-gray-900">Eng. Ahmed Hussen Ahmed</h1>
                   <p className="mt-2 text-xl text-[#0095FF] font-medium">Founder & Chief Engineer</p>
                 </div>
               </div>
@@ -71,7 +71,7 @@ export default function Profile() {
                   <div className="rounded-xl bg-white p-6 shadow-md">
                     <h2 className="text-xl font-semibold text-[#0095FF]">About</h2>
                     <p className="mt-4 text-gray-600">
-                      As the Founder and Chief Engineer of AHA Construction, Engineer Ahmed Husse Ahmed 
+                      As the Founder and Chief Engineer of AHA Construction, Engineer Ahmed Hussen Ahmed 
                       brings a wealth of experience and expertise to every project. His leadership has 
                       been instrumental in establishing AHA Construction as a leading construction company 
                       in the Wollo region, particularly in Dessie, Kombolcha, and Gerba.
