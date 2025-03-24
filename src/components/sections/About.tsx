@@ -62,7 +62,7 @@ export default function About() {
             className="relative overflow-hidden rounded-2xl bg-primary-800 shadow-xl lg:row-span-2"
           >
             <img
-              src={`${import.meta.env.BASE_URL}images/projects/foundation-2.jpg`}
+              src="/aha-realestate-website/images/projects/foundation-2.jpg"
               alt="Construction site showcasing our expertise"
               className="aspect-[5/6] w-full object-cover brightness-95"
             />
