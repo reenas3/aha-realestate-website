@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar'
 import Hero from './components/sections/Hero'
 import About from './components/sections/About'
@@ -11,7 +11,7 @@ import './index.css'
 
 export default function App() {
   return (
-    <Router basename="/aha-realestate-website">
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={

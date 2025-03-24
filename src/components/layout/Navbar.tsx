@@ -37,7 +37,7 @@ export default function Navbar() {
             to="/profile" 
             className="ml-4 rounded-full bg-white px-4 py-2 text-[#0095FF] hover:bg-white/90"
           >
-            Get Started
+            Meet our Chief Engineer
           </Link>
         </div>
 
@@ -77,7 +77,7 @@ export default function Navbar() {
                 to="/profile" 
                 className="rounded-full bg-white px-4 py-2 text-center text-[#0095FF] hover:bg-white/90"
               >
-                Get Started
+                Meet our Chief Engineer
               </Link>
             </div>
           </div>

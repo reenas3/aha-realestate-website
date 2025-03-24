@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
@@ -7,11 +8,11 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <img
-          src="/images/projects/foundation-1.jpg"
-          alt="AHA Construction Project"
+          src="/aha-realestate-website/images/projects/foundation-1.jpg"
+          alt="Construction site"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40" />
       </div>
 
       {/* Content */}
@@ -69,13 +70,13 @@ export default function Hero() {
                   <ArrowRightIcon className="h-4 w-4" />
                 </span>
               </a>
-              <a 
-                href="/profile" 
+              <Link
+                to="/profile"
                 className="btn-outline border-white text-white hover:bg-white/10"
               >
                 Meet Our Chief Engineer
                 <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
+              </Link>
             </motion.div>
 
             {/* Project Stats */}
