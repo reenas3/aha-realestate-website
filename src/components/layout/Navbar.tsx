@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -14,6 +15,23 @@ export default function Navbar() {
       document.body.style.overflow = 'unset';
     }
   }, [isOpen]);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    setIsOpen(false);
+
+    // If we're not on the home page, navigate there first
+    if (location.pathname !== '/') {
+      window.location.href = `/${sectionId}`;
+      return;
+    }
+
+    // Find the section and scroll to it
+    const element = document.getElementById(sectionId.replace('#', ''));
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-[#0095FF] shadow-lg">
@@ -30,16 +48,16 @@ export default function Navbar() {
           <Link to="/" className="px-4 py-2 text-white hover:text-white/80">
             Home
           </Link>
-          <a href="#about" className="px-4 py-2 text-white hover:text-white/80">
+          <a href="#about" className="px-4 py-2 text-white hover:text-white/80" onClick={(e) => handleNavClick(e, 'about')}>
             About
           </a>
-          <a href="#services" className="px-4 py-2 text-white hover:text-white/80">
+          <a href="#services" className="px-4 py-2 text-white hover:text-white/80" onClick={(e) => handleNavClick(e, 'services')}>
             Services
           </a>
-          <a href="#projects" className="px-4 py-2 text-white hover:text-white/80">
+          <a href="#projects" className="px-4 py-2 text-white hover:text-white/80" onClick={(e) => handleNavClick(e, 'projects')}>
             Projects
           </a>
-          <a href="#contact" className="px-4 py-2 text-white hover:text-white/80">
+          <a href="#contact" className="px-4 py-2 text-white hover:text-white/80" onClick={(e) => handleNavClick(e, 'contact')}>
             Contact
           </a>
           <Link 
@@ -80,16 +98,16 @@ export default function Navbar() {
                 <Link to="/" className="text-white hover:text-white/80" onClick={() => setIsOpen(false)}>
                   Home
                 </Link>
-                <a href="#about" className="text-white hover:text-white/80" onClick={() => setIsOpen(false)}>
+                <a href="#about" className="text-white hover:text-white/80" onClick={(e) => handleNavClick(e, 'about')}>
                   About
                 </a>
-                <a href="#services" className="text-white hover:text-white/80" onClick={() => setIsOpen(false)}>
+                <a href="#services" className="text-white hover:text-white/80" onClick={(e) => handleNavClick(e, 'services')}>
                   Services
                 </a>
-                <a href="#projects" className="text-white hover:text-white/80" onClick={() => setIsOpen(false)}>
+                <a href="#projects" className="text-white hover:text-white/80" onClick={(e) => handleNavClick(e, 'projects')}>
                   Projects
                 </a>
-                <a href="#contact" className="text-white hover:text-white/80" onClick={() => setIsOpen(false)}>
+                <a href="#contact" className="text-white hover:text-white/80" onClick={(e) => handleNavClick(e, 'contact')}>
                   Contact
                 </a>
                 <Link 
