@@ -5,7 +5,7 @@ const projects = [
   {
     title: 'Commercial Building Development',
     description: 'Ongoing construction of a major commercial complex featuring modern architectural design and robust structural engineering.',
-    image: '/images/projects/foundation-1.jpg',
+    imageUrl: '/aha-realestate-website/images/projects/foundation-1.jpg',
     location: 'Dessie',
     date: 'In Progress 2024',
     type: 'Commercial',
@@ -14,7 +14,7 @@ const projects = [
   {
     title: 'Foundation and Column Work',
     description: 'Precision engineering in the foundation phase with reinforced concrete columns, showcasing our expertise in structural construction.',
-    image: '/images/projects/foundation-2.jpg',
+    imageUrl: '/aha-realestate-website/images/projects/foundation-2.jpg',
     location: 'Gerba',
     date: 'In Progress 2024',
     type: 'Commercial',
@@ -23,7 +23,7 @@ const projects = [
   {
     title: 'Mountain View Development',
     description: 'Strategic construction project with panoramic mountain views, incorporating modern construction techniques and quality materials.',
-    image: '/images/projects/foundation-3.jpg',
+    imageUrl: '/aha-realestate-website/images/projects/foundation-3.jpg',
     location: 'Dessie',
     date: 'In Progress 2024',
     type: 'Commercial',
@@ -32,7 +32,7 @@ const projects = [
   {
     title: 'Structural Framework Progress',
     description: 'Detailed view of our construction progress showing precise column placement and foundation work.',
-    image: '/images/projects/foundation-4.jpg',
+    imageUrl: '/aha-realestate-website/images/projects/foundation-4.jpg',
     location: 'Dessie',
     date: 'In Progress 2024',
     type: 'Commercial',
@@ -74,7 +74,7 @@ export default function Projects() {
             >
               <div className="relative w-full">
                 <img
-                  src={project.image}
+                  src={project.imageUrl}
                   alt={project.title}
                   className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2] border-2 border-primary-600"
                 />
