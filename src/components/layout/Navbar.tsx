@@ -42,7 +42,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0095FF] shadow-lg">
+    <header className="sticky top-0 z-50 bg-[#2563EB] shadow-lg">
       <nav className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2 text-white">
           <svg className="h-8 w-8 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +73,7 @@ export default function Navbar() {
           </a>
           <Link 
             to="/profile" 
-            className="ml-4 rounded-full bg-white px-4 py-2 text-[#0095FF] hover:bg-white/90"
+            className="ml-4 rounded-full bg-white px-4 py-2 text-[#2563EB] hover:bg-white/90"
           >
             Meet our Chief Engineer
           </Link>
@@ -132,7 +132,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="absolute inset-x-0 top-full bg-[#0095FF] p-6 md:hidden z-50 shadow-lg"
+              className="absolute inset-x-0 top-full bg-[#2563EB] p-6 md:hidden z-50 shadow-lg"
             >
               <div className="flex flex-col gap-4">
                 <Link 
@@ -179,7 +179,7 @@ export default function Navbar() {
                 </a>
                 <Link 
                   to="/profile" 
-                  className="mt-2 rounded-full bg-white px-6 py-3 text-center text-[#0095FF] hover:bg-white/90 transition-colors duration-200 text-lg font-medium shadow-md hover:shadow-lg"
+                  className="mt-2 rounded-full bg-white px-6 py-3 text-center text-[#2563EB] hover:bg-white/90 transition-colors duration-200 text-lg font-medium shadow-md hover:shadow-lg"
                   onClick={() => setIsOpen(false)}
                 >
                   Meet our Chief Engineer
