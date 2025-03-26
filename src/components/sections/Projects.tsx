@@ -3,20 +3,20 @@ import { MapPinIcon, CalendarIcon, BuildingOfficeIcon } from '@heroicons/react/2
 
 const projects = [
   {
-    title: 'My Residence Project',
+    title: 'MYS Residential Mansion',
     description: 'Luxurious residential complex featuring modern amenities and elegant architectural design.',
     imageUrl: `${import.meta.env.BASE_URL}images/projects/mysresidence.JPG`,
-    location: 'Dessie',
-    date: 'Completed 2023',
+    location: 'Gerba Suburban Area',
+    date: 'Starting 2026',
     type: 'Residential',
     details: 'Modern residential development with premium finishes',
   },
   {
-    title: 'Seid Residence Development',
+    title: 'SAA Residential Mansion',
     description: 'Custom-designed residential project combining comfort with contemporary architecture.',
     imageUrl: `${import.meta.env.BASE_URL}images/projects/seidresidence.JPG`,
-    location: 'Dessie',
-    date: 'Completed 2023',
+    location: 'Gerba Suburban Area',
+    date: 'Starting 2026',
     type: 'Residential',
     details: 'Bespoke residential construction with modern amenities',
   },
