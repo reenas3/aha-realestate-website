@@ -55,6 +55,28 @@ export default function Hero() {
               trusted partner in construction.
             </motion.p>
 
+            {/* Project Stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="mt-12 grid grid-cols-3 gap-8 border-t border-white/20 pt-8"
+            >
+              <div>
+                <div className="text-3xl font-bold text-white">50+</div>
+                <div className="mt-1 text-sm text-gray-300">Projects Completed</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-white">13+</div>
+                <div className="mt-1 text-sm text-gray-300">Years Experience</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-white">100%</div>
+                <div className="mt-1 text-sm text-gray-300">Client Satisfaction</div>
+              </div>
+            </motion.div>
+
+            {/* Action Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -78,27 +100,6 @@ export default function Hero() {
                 <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </motion.div>
-
-            {/* Project Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="mt-12 grid grid-cols-3 gap-8 border-t border-white/20 pt-8"
-            >
-              <div>
-                <div className="text-3xl font-bold text-white">50+</div>
-                <div className="mt-1 text-sm text-gray-300">Projects Completed</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-white">13+</div>
-                <div className="mt-1 text-sm text-gray-300">Years Experience</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-white">100%</div>
-                <div className="mt-1 text-sm text-gray-300">Client Satisfaction</div>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* CEO Image and Title */}
@@ -106,14 +107,14 @@ export default function Hero() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex flex-col items-center -mt-16"
+            className="flex flex-col items-center -mt-[9.5rem]"
           >
             <div className="text-center">
               <div className="relative w-72 h-72 mx-auto">
                 <img
                   src={`${import.meta.env.BASE_URL}images/eng_ahmed_husse.jpg`}
                   alt="CEO Eng Ahmed Hussen Ahmed"
-                  className="w-full h-full object-cover rounded-full border-2 border-blue-400 shadow-lg"
+                  className="w-full h-full object-cover rounded-full border-[3px] border-primary-600/90 shadow-lg"
                 />
               </div>
               <motion.div
