@@ -100,6 +100,32 @@ export default function Hero() {
               </div>
             </motion.div>
           </motion.div>
+
+          {/* CEO Image and Title */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="flex items-center justify-center"
+          >
+            <div className="text-center">
+              <div className="relative w-80 h-80 mx-auto">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/eng_ahmed_husse.jpg`}
+                  alt="CEO Eng Ahmed Hussen Ahmed"
+                  className="w-full h-full object-cover rounded-full border-4 border-primary-400 shadow-lg"
+                />
+              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.9 }}
+                className="mt-6 text-center"
+              >
+                <h3 className="text-2xl font-bold text-white">CEO Eng Ahmed Hussen Ahmed</h3>
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </div>
