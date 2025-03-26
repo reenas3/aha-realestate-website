@@ -65,6 +65,9 @@ export default function Navbar() {
           <a href="#projects" className="px-4 py-2 text-white hover:text-white/80" onClick={(e) => handleNavClick(e, 'projects')}>
             Projects
           </a>
+          <Link to="/testimonials" className="px-4 py-2 text-white hover:text-white/80">
+            Testimonials
+          </Link>
           <a href="#contact" className="px-4 py-2 text-white hover:text-white/80" onClick={(e) => handleNavClick(e, 'contact')}>
             Contact
           </a>
@@ -160,6 +163,13 @@ export default function Navbar() {
                 >
                   Projects
                 </a>
+                <Link 
+                  to="/testimonials" 
+                  className="text-white hover:text-white/80 transition-colors duration-200 text-lg"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Testimonials
+                </Link>
                 <a 
                   href="#contact" 
                   className="text-white hover:text-white/80 transition-colors duration-200 text-lg" 

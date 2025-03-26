@@ -3,29 +3,29 @@ import { MapPinIcon, CalendarIcon, BuildingOfficeIcon } from '@heroicons/react/2
 
 const projects = [
   {
-    id: 1,
-    title: "MYS Residential Mansion",
-    description: "Luxurious residential complex featuring modern amenities and elegant architectural design. Starting 2026 in Gerba Suburban Area.",
+    title: 'MYS Residential Mansion',
+    description: 'Luxurious residential complex featuring modern amenities and elegant architectural design.',
     imageUrl: `${import.meta.env.BASE_URL}images/projects/mysresidence.JPG`,
-    location: "Gerba Suburban Area",
-    status: "Starting 2026",
-    category: "Residential"
+    location: 'Gerba',
+    date: 'Starting 2026',
+    type: 'Residential',
+    details: 'Modern residential development with premium finishes',
   },
   {
-    id: 2,
-    title: "SAA Residential Mansion",
-    description: "Custom-designed residential project combining comfort with contemporary architecture. Starting 2026 in Gerba Suburban Area.",
-    imageUrl: `${import.meta.env.BASE_URL}images/projects/saaresidence.JPG`,
-    location: "Gerba Suburban Area",
-    status: "Starting 2026",
-    category: "Residential"
+    title: 'SAA Residential Mansion',
+    description: 'Custom-designed residential project combining comfort with contemporary architecture.',
+    imageUrl: `${import.meta.env.BASE_URL}images/projects/seidresidence.JPG`,
+    location: 'Gerba',
+    date: 'Starting 2026',
+    type: 'Residential',
+    details: 'Bespoke residential construction with modern amenities',
   },
   {
     title: 'Main Commercial Complex',
     description: 'State-of-the-art commercial building showcasing innovative design and superior construction quality.',
     imageUrl: `${import.meta.env.BASE_URL}images/projects/main.jpg`,
     location: 'Dessie',
-    date: 'Completed 2024',
+    date: 'In Progress 2025',
     type: 'Commercial',
     details: 'Premium commercial space with modern infrastructure',
   },

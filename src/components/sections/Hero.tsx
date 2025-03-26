@@ -62,7 +62,7 @@ export default function Hero() {
                 className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm"
               >
                 <span className="h-2 w-2 rounded-full bg-blue-400"></span>
-                Main Commercial Complex on Progress
+                Transforming Wollo's Skyline
               </motion.div>
 
               <motion.h1
@@ -71,8 +71,9 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="mt-4 text-3xl font-black tracking-tight sm:text-5xl lg:text-7xl"
               >
-                <span className="text-white font-extrabold drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">የእርስዎን</span> <br />
-                <span className="text-primary-400">ራእይ</span> <span className="text-white font-extrabold drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">ወደ እውነታ እንቀይራለን!</span>
+                <span className="text-white font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">የእርስዎን</span> <br />
+                <span className="text-white font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">ራእይ</span>{' '}
+                <span className="text-white font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">ወደ እውነታ እንቀይራለን!</span>
               </motion.h1>
 
               <motion.p
@@ -204,6 +205,14 @@ export default function Hero() {
                     }`}
                   />
                 ))}
+              </div>
+              <div className="mt-4 text-center">
+                <Link
+                  to="/testimonials"
+                  className="text-sm text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                >
+                  View All Testimonials →
+                </Link>
               </div>
             </motion.div>
           </div>
