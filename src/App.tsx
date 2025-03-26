@@ -8,7 +8,7 @@ import Contact from './components/sections/Contact'
 import Footer from './components/layout/Footer'
 import Profile from './routes/Profile'
 import ComingSoon from './routes/ComingSoon'
-import Testimonials from './routes/Testimonials'
+import TestimonialsSection from './components/sections/Testimonials'
 import './index.css'
 
 export default function App() {
@@ -26,6 +26,7 @@ export default function App() {
                     <About />
                     <Services />
                     <Projects />
+                    <TestimonialsSection />
                     <Contact />
                   </div>
                 </div>
@@ -36,7 +37,6 @@ export default function App() {
         } />
         <Route path="/profile" element={<Profile />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
-        <Route path="/testimonials" element={<Testimonials />} />
       </Routes>
     </Router>
   )

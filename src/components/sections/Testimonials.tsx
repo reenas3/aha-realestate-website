@@ -24,9 +24,9 @@ const testimonials = [
   }
 ];
 
-export default function Testimonials() {
+export default function TestimonialsSection() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white flex items-center py-12">
+    <section id="testimonials" className="py-24 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -79,6 +79,6 @@ export default function Testimonials() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 } 

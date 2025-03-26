@@ -62,9 +62,9 @@ export default function Hero() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="inline-flex items-center gap-2 rounded-full bg-green-600 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm"
+                className="inline-flex items-center gap-2 rounded-full bg-[#2563EB] px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm"
               >
-                <span className="h-2 w-2 rounded-full bg-green-400"></span>
+                <span className="h-2 w-2 rounded-full bg-blue-400"></span>
                 Transforming Wollo's Skyline
               </motion.div>
 
@@ -214,12 +214,12 @@ export default function Hero() {
                 ))}
               </div>
               <div className="mt-4 text-center">
-                <Link
-                  to="/testimonials"
+                <a
+                  href="#testimonials"
                   className="text-sm text-blue-400 hover:text-blue-300 transition-colors duration-200"
                 >
                   View All Testimonials →
-                </Link>
+                </a>
               </div>
             </motion.div>
           </div>
