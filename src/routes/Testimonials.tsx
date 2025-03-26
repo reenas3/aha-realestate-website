@@ -3,23 +3,23 @@ import { motion } from 'framer-motion';
 const testimonials = [
   {
     id: 1,
-    name: "Mohammed Yassin",
+    name: { first: "Mohammed", last: "Yassin" },
     image: `${import.meta.env.BASE_URL}images/projects/testimonial1.jpeg`,
-    text: "Working with Eng Ahmed was an exceptional experience. His attention to detail and commitment to quality is unmatched.",
+    text: "Engineer Ahmed's exceptional leadership and attention to detail transformed our project. His commitment to quality and innovative solutions made our construction journey remarkable.",
     role: "Business Owner"
   },
   {
     id: 2,
-    name: "Mohammed Adem",
+    name: { first: "Mohammed", last: "Adem" },
     image: `${import.meta.env.BASE_URL}images/projects/testimonial2.JPG`,
-    text: "The professionalism and expertise demonstrated by AHA Construction exceeded our expectations.",
+    text: "Engineer Ahmed's expertise and professional approach exceeded our expectations. His dedication to excellence and creative vision brought our construction dreams to life.",
     role: "Business Owner"
   },
   {
     id: 3,
-    name: "Bushira Awol",
+    name: { first: "Bushira", last: "Awol" },
     image: `${import.meta.env.BASE_URL}images/projects/testimonial3.JPG`,
-    text: "Eng Ahmed's innovative approach and dedication to excellence made our project a great success.",
+    text: "Engineer Ahmed's innovative mindset and outstanding project management skills delivered perfect results. His technical knowledge and attention to detail are truly impressive.",
     role: "Business Owner"
   }
 ];
@@ -52,24 +52,26 @@ export default function Testimonials() {
               className="h-full"
             >
               <div className="group h-full flex flex-col relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl">
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="relative pt-[75%]">
                   <img
                     src={testimonial.image}
-                    alt={testimonial.name}
-                    className="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                    alt={`${testimonial.name.first} ${testimonial.name.last}`}
+                    className="absolute inset-0 w-full h-full object-contain bg-gray-100 transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="flex-1 p-6 flex flex-col">
                   <div className="flex items-center gap-4 mb-4">
                     <div>
-                      <h3 className="text-xl font-semibold text-green-600">
-                        {testimonial.name}
+                      <h3 className="text-xl font-semibold">
+                        <span className="text-green-600">{testimonial.name.first}</span>
+                        {' '}
+                        <span className="text-gray-900">{testimonial.name.last}</span>
                       </h3>
                       <p className="text-sm text-blue-600">{testimonial.role}</p>
                     </div>
                   </div>
                   <blockquote className="flex-1">
-                    <p className="text-base italic text-gray-600 leading-relaxed">"{testimonial.text}"</p>
+                    <p className="text-base italic text-green-600 leading-relaxed">"{testimonial.text}"</p>
                   </blockquote>
                 </div>
               </div>

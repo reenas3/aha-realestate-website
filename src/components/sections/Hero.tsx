@@ -8,23 +8,23 @@ export default function Hero() {
   const testimonials = [
     {
       id: 1,
-      name: "Mohammed Yassin",
+      name: { first: "Mohammed", last: "Yassin" },
       image: `${import.meta.env.BASE_URL}images/projects/testimonial1.jpeg`,
-      text: "Working with Eng Ahmed was an exceptional experience. His attention to detail and commitment to quality is unmatched.",
+      text: "Engineer Ahmed's exceptional leadership and attention to detail transformed our project. His commitment to quality and innovative solutions made our construction journey remarkable.",
       role: "Business Owner"
     },
     {
       id: 2,
-      name: "Mohammed Adem",
+      name: { first: "Mohammed", last: "Adem" },
       image: `${import.meta.env.BASE_URL}images/projects/testimonial2.JPG`,
-      text: "The professionalism and expertise demonstrated by AHA Construction exceeded our expectations.",
+      text: "Engineer Ahmed's expertise and professional approach exceeded our expectations. His dedication to excellence and creative vision brought our construction dreams to life.",
       role: "Business Owner"
     },
     {
       id: 3,
-      name: "Bushira Awol",
+      name: { first: "Bushira", last: "Awol" },
       image: `${import.meta.env.BASE_URL}images/projects/testimonial3.JPG`,
-      text: "Eng Ahmed's innovative approach and dedication to excellence made our project a great success.",
+      text: "Engineer Ahmed's innovative mindset and outstanding project management skills delivered perfect results. His technical knowledge and attention to detail are truly impressive.",
       role: "Business Owner"
     }
   ];
@@ -75,7 +75,7 @@ export default function Hero() {
                 className="mt-4 text-3xl font-black tracking-tight sm:text-5xl lg:text-7xl"
               >
                 <span className="text-white font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">የእርስዎን</span> <br />
-                <span className="text-white font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">ራእይ</span>{' '}
+                <span className="text-green-500 font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">ራዕይ</span>{' '}
                 <span className="text-white font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">ወደ እውነታ እንቀይራለን!</span>
               </motion.h1>
 
@@ -178,7 +178,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.1 }}
-              className="relative overflow-hidden rounded-xl bg-white/5 p-4 sm:p-6 backdrop-blur-sm"
+              className="relative overflow-hidden rounded-xl bg-blue-600/20 p-4 sm:p-6 backdrop-blur-sm"
             >
               <motion.div
                 key={currentTestimonial}
@@ -190,13 +190,14 @@ export default function Hero() {
               >
                 <img
                   src={testimonials[currentTestimonial].image}
-                  alt={testimonials[currentTestimonial].name}
+                  alt={`${testimonials[currentTestimonial].name.first} ${testimonials[currentTestimonial].name.last}`}
                   className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-green-400"
                 />
                 <div>
-                  <p className="text-xs sm:text-sm text-gray-300 italic">"{testimonials[currentTestimonial].text}"</p>
+                  <p className="text-xs sm:text-sm text-green-400 italic">"{testimonials[currentTestimonial].text}"</p>
                   <h4 className="mt-2 text-sm sm:text-base text-white font-semibold">
-                    <span className="text-green-400">{testimonials[currentTestimonial].name}</span>
+                    <span className="text-green-400">{testimonials[currentTestimonial].name.first}</span>
+                    <span className="text-white">{' '}{testimonials[currentTestimonial].name.last}</span>
                     <span className="text-xs text-gray-400 ml-2">{testimonials[currentTestimonial].role}</span>
                   </h4>
                 </div>
