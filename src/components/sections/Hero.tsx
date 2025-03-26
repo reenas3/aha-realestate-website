@@ -94,13 +94,6 @@ export default function Hero() {
                   <ArrowRightIcon className="h-4 w-4" />
                 </span>
               </a>
-              <Link
-                to="/profile"
-                className="btn-outline border-white text-white hover:bg-white/10"
-              >
-                Meet Our Chief Engineer
-                <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
             </motion.div>
           </motion.div>
 
@@ -126,6 +119,20 @@ export default function Hero() {
                 className="mt-6 text-center"
               >
                 <h3 className="text-2xl font-bold text-white">CEO Eng Ahmed Hussen Ahmed</h3>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.0 }}
+                className="mt-8"
+              >
+                <Link
+                  to="/profile"
+                  className="btn-outline border-white text-white hover:bg-white/10"
+                >
+                  Meet Our Chief Engineer
+                  <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
               </motion.div>
             </div>
           </motion.div>
