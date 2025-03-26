@@ -108,7 +108,7 @@ export default function Hero() {
               <div className="relative w-72 h-72 mx-auto">
                 <img
                   src={`${import.meta.env.BASE_URL}images/eng_ahmed_husse.jpg`}
-                  alt="CEO Eng Ahmed Hussen Ahmed"
+                  alt="Eng Ahmed Hussen Ahmed"
                   className="w-full h-full object-cover rounded-full border-[3px] border-primary-600/90 shadow-lg"
                 />
               </div>
@@ -128,7 +128,7 @@ export default function Hero() {
               >
                 <Link
                   to="/profile"
-                  className="btn-outline border-white text-white hover:bg-white/10"
+                  className="btn bg-primary-600/90 text-white hover:bg-primary-500/90 border-none"
                 >
                   Meet Our Chief Engineer
                   <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
