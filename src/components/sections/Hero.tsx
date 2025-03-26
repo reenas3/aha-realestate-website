@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <img
-          src={`${import.meta.env.BASE_URL}images/projects/foundation-1.jpg`}
+          src={`${import.meta.env.BASE_URL}images/projects/main.jpg`}
           alt="Construction site"
           className="h-full w-full object-cover brightness-110"
         />
