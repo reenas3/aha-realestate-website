@@ -106,14 +106,14 @@ export default function Hero() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex items-center justify-center"
+            className="flex items-start pt-4 justify-center"
           >
             <div className="text-center">
               <div className="relative w-80 h-80 mx-auto">
                 <img
                   src={`${import.meta.env.BASE_URL}images/eng_ahmed_husse.jpg`}
                   alt="CEO Eng Ahmed Hussen Ahmed"
-                  className="w-full h-full object-cover rounded-full border-4 border-primary-400 shadow-lg"
+                  className="w-full h-full object-cover rounded-full border-2 border-blue-400 shadow-lg"
                 />
               </div>
               <motion.div
