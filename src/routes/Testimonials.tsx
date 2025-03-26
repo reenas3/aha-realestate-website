@@ -52,11 +52,11 @@ export default function Testimonials() {
               className="h-full"
             >
               <div className="group h-full flex flex-col relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl">
-                <div className="relative pt-[75%]">
+                <div className="relative pt-[100%] bg-gray-100">
                   <img
                     src={testimonial.image}
                     alt={`${testimonial.name.first} ${testimonial.name.last}`}
-                    className="absolute inset-0 w-full h-full object-contain bg-gray-100 transition-transform duration-300 group-hover:scale-105"
+                    className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="flex-1 p-6 flex flex-col">
@@ -71,24 +71,13 @@ export default function Testimonials() {
                     </div>
                   </div>
                   <blockquote className="flex-1">
-                    <p className="text-base italic text-green-600 leading-relaxed">"{testimonial.text}"</p>
+                    <p className="text-base italic text-gray-900 leading-relaxed">"{testimonial.text}"</p>
                   </blockquote>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-12 flex justify-center"
-        >
-          <a href="/" className="btn">
-            Back to Home
-          </a>
-        </motion.div>
       </div>
     </div>
   );
