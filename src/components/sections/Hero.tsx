@@ -128,7 +128,7 @@ export default function Hero() {
               >
                 <Link
                   to="/profile"
-                  className="btn bg-primary-600/90 text-white hover:bg-primary-500/90 border-none"
+                  className="btn bg-blue-600 text-white hover:bg-blue-500 border-none"
                 >
                   Meet Our Chief Engineer
                   <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
