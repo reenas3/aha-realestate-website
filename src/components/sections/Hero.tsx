@@ -106,10 +106,10 @@ export default function Hero() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex items-start pt-8 justify-center"
+            className="flex flex-col items-center -mt-16"
           >
             <div className="text-center">
-              <div className="relative w-80 h-80 mx-auto">
+              <div className="relative w-72 h-72 mx-auto">
                 <img
                   src={`${import.meta.env.BASE_URL}images/eng_ahmed_husse.jpg`}
                   alt="CEO Eng Ahmed Hussen Ahmed"
