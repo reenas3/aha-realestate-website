@@ -85,7 +85,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="mt-4 sm:mt-6 text-base sm:text-lg leading-8 text-gray-300"
               >
-                With over a decade of construction excellence in Dessie, Kombolcha, and Gerba, we bring expertise, 
+                With over a decade of construction excellence in <span className="font-bold text-green-500">Dessie, Kombolcha, Degab, Gerba, and Bati</span> we bring expertise, 
                 quality, and innovation to every project. From foundation to finish, we're your 
                 trusted partner in construction.
               </motion.p>
