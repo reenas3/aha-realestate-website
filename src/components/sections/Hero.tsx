@@ -10,9 +10,9 @@ export default function Hero() {
         <img
           src={`${import.meta.env.BASE_URL}images/projects/foundation-1.jpg`}
           alt="Construction site"
-          className="h-full w-full object-cover border-2 border-[#0095FF]"
+          className="h-full w-full object-cover brightness-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/20" />
       </div>
 
       {/* Content */}
