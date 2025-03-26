@@ -106,7 +106,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex items-start pt-4 justify-center"
+            className="flex items-start pt-8 justify-center"
           >
             <div className="text-center">
               <div className="relative w-80 h-80 mx-auto">
