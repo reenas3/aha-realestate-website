@@ -34,20 +34,20 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="relative isolate min-h-[90vh] flex items-center">
+    <div className="relative isolate min-h-screen flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <img
           src={`${import.meta.env.BASE_URL}images/projects/mysresidence.JPG`}
           alt="Construction site"
-          className="h-full w-full object-cover brightness-110"
+          className="h-full w-full object-cover object-center brightness-110 min-h-screen"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30" />
       </div>
 
       {/* Content */}
-      <div className="container relative py-24 sm:py-32 lg:py-40">
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
+      <div className="container relative py-8 sm:py-16 lg:py-24">
+        <div className="grid gap-4 lg:grid-cols-2 lg:gap-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -69,7 +69,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="mt-6 text-4xl font-black tracking-tight sm:text-6xl lg:text-7xl"
+                className="mt-4 text-3xl font-black tracking-tight sm:text-5xl lg:text-7xl"
               >
                 <span className="text-blue-500">የእርስዎን</span> <br />
                 <span className="text-primary-400">ራእይ</span> <span className="text-blue-500">ወደ እውነታ እንቀይራለን!</span>
@@ -79,7 +79,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="mt-6 text-lg leading-8 text-gray-300"
+                className="mt-4 sm:mt-6 text-base sm:text-lg leading-8 text-gray-300"
               >
                 With over a decade of construction excellence in Dessie, Kombolcha, and Gerba, we bring expertise, 
                 quality, and innovation to every project. From foundation to finish, we're your 
@@ -91,19 +91,19 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="mt-12 grid grid-cols-3 gap-8 border-t border-white/20 pt-8"
+                className="mt-8 sm:mt-12 grid grid-cols-3 gap-4 sm:gap-8 border-t border-white/20 pt-6 sm:pt-8"
               >
                 <div>
-                  <div className="text-3xl font-bold text-white">50+</div>
-                  <div className="mt-1 text-sm text-gray-300">Projects Completed</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-white">50+</div>
+                  <div className="mt-1 text-xs sm:text-sm text-gray-300">Projects Completed</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-white">13+</div>
-                  <div className="mt-1 text-sm text-gray-300">Years Experience</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-white">13+</div>
+                  <div className="mt-1 text-xs sm:text-sm text-gray-300">Years Experience</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-white">100%</div>
-                  <div className="mt-1 text-sm text-gray-300">Client Satisfaction</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-white">100%</div>
+                  <div className="mt-1 text-xs sm:text-sm text-gray-300">Client Satisfaction</div>
                 </div>
               </motion.div>
             </div>
@@ -113,7 +113,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="mt-10 flex flex-col gap-4 sm:flex-row sm:gap-6"
+              className="mt-6 sm:mt-10 flex flex-col gap-4 sm:flex-row sm:gap-6"
             >
               <a
                 href="#projects"
@@ -128,7 +128,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Right Column with Engineer Image and Testimonials */}
-          <div className="flex flex-col space-y-8">
+          <div className="flex flex-col space-y-6 sm:space-y-8 mt-8 lg:mt-0">
             {/* Engineer Image and Title */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -137,7 +137,7 @@ export default function Hero() {
               className="flex flex-col items-center"
             >
               <div className="text-center">
-                <div className="relative w-72 h-72 mx-auto">
+                <div className="relative w-48 h-48 sm:w-72 sm:h-72 mx-auto">
                   <img
                     src={`${import.meta.env.BASE_URL}images/eng_ahmed_husse.jpg`}
                     alt="Eng Ahmed Hussen Ahmed"
@@ -148,15 +148,15 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.9 }}
-                  className="mt-6 text-center"
+                  className="mt-4 sm:mt-6 text-center"
                 >
-                  <h3 className="text-2xl font-bold text-white">Eng Ahmed Hussen Ahmed</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white">Eng Ahmed Hussen Ahmed</h3>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 1.0 }}
-                  className="mt-8"
+                  className="mt-6 sm:mt-8"
                 >
                   <Link
                     to="/profile"
@@ -174,7 +174,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.1 }}
-              className="relative overflow-hidden rounded-xl bg-white/5 p-6 backdrop-blur-sm"
+              className="relative overflow-hidden rounded-xl bg-white/5 p-4 sm:p-6 backdrop-blur-sm"
             >
               <motion.div
                 key={currentTestimonial}
@@ -182,19 +182,19 @@ export default function Hero() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="flex items-center space-x-4"
+                className="flex items-center space-x-3 sm:space-x-4"
               >
                 <img
                   src={testimonials[currentTestimonial].image}
                   alt={testimonials[currentTestimonial].name}
-                  className="w-16 h-16 rounded-full object-cover border-2 border-blue-400"
+                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-blue-400"
                 />
                 <div>
-                  <p className="text-sm text-gray-300 italic">"{testimonials[currentTestimonial].text}"</p>
-                  <h4 className="mt-2 text-white font-semibold">{testimonials[currentTestimonial].name}</h4>
+                  <p className="text-xs sm:text-sm text-gray-300 italic">"{testimonials[currentTestimonial].text}"</p>
+                  <h4 className="mt-2 text-sm sm:text-base text-white font-semibold">{testimonials[currentTestimonial].name}</h4>
                 </div>
               </motion.div>
-              <div className="mt-4 flex justify-center space-x-2">
+              <div className="mt-3 sm:mt-4 flex justify-center space-x-2">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
