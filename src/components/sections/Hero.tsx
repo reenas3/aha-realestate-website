@@ -109,7 +109,7 @@ export default function Hero() {
                 <img
                   src={`${import.meta.env.BASE_URL}images/eng_ahmed_husse.jpg`}
                   alt="Eng Ahmed Hussen Ahmed"
-                  className="w-full h-full object-cover rounded-full border-[3px] border-primary-600/90 shadow-lg"
+                  className="w-full h-full object-cover rounded-full border-[3px] border-blue-600 shadow-lg"
                 />
               </div>
               <motion.div
@@ -118,7 +118,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.9 }}
                 className="mt-6 text-center"
               >
-                <h3 className="text-2xl font-bold text-white">CEO Eng Ahmed Hussen Ahmed</h3>
+                <h3 className="text-2xl font-bold text-white">Eng Ahmed Hussen Ahmed</h3>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
