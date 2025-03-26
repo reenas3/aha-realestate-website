@@ -5,9 +5,9 @@
 @layer base {
   html {
     @apply scroll-smooth antialiased;
-  }
-  
-  body {
+}
+
+body {
     @apply bg-white text-secondary-900 overflow-x-hidden font-sans;
   }
 

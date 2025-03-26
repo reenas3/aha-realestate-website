@@ -8,7 +8,7 @@ export default function ProfilePage() {
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-b from-primary-950/50 to-primary-900/90"></div>
         </div>
-        
+
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -55,8 +55,8 @@ export default function ProfilePage() {
                   <div className="rounded-xl bg-white/5 p-6">
                     <h2 className="text-xl font-semibold text-primary-200">Experience</h2>
                     <p className="mt-4 text-gray-300">
-                      Extensive experience in both road and building construction, 
-                      leading major projects across Ethiopia with a focus on 
+                      Extensive experience in both road and building construction,
+                      leading major projects across Ethiopia with a focus on
                       quality and innovation.
                     </p>
                   </div>
@@ -77,14 +77,14 @@ export default function ProfilePage() {
                     <div className="rounded-xl bg-white/5 p-6">
                       <h2 className="text-xl font-semibold text-primary-200">About</h2>
                       <p className="mt-4 text-gray-300">
-                        As the Founder and Chief Engineer of AHA Construction, Engineer Ahmed Husse Ahmed 
-                        brings a wealth of experience and expertise to every project. His leadership has 
-                        been instrumental in establishing AHA Construction as a leading construction company 
+                        As the Founder and Chief Engineer of AHA Construction, Engineer Ahmed Husse Ahmed
+                        brings a wealth of experience and expertise to every project. His leadership has
+                        been instrumental in establishing AHA Construction as a leading construction company
                         in the Wollo region, particularly in Dessie, Kombolcha, and Gerba.
                       </p>
                       <p className="mt-4 text-gray-300">
-                        Under his guidance, the company has successfully completed numerous significant 
-                        projects, maintaining the highest standards of quality and innovation in both 
+                        Under his guidance, the company has successfully completed numerous significant
+                        projects, maintaining the highest standards of quality and innovation in both
                         building and road construction.
                       </p>
                     </div>
