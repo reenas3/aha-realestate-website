@@ -191,14 +191,14 @@ export default function Hero() {
                 <img
                   src={testimonials[currentTestimonial].image}
                   alt={`${testimonials[currentTestimonial].name.first} ${testimonials[currentTestimonial].name.last}`}
-                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-green-400"
+                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover object-center border-2 border-green-400"
                 />
                 <div>
                   <p className="text-xs sm:text-sm text-white italic">"{testimonials[currentTestimonial].text}"</p>
                   <h4 className="mt-2 text-sm sm:text-base text-white font-semibold">
                     <span className="text-green-400">{testimonials[currentTestimonial].name.first}</span>
                     <span className="text-white">{' '}{testimonials[currentTestimonial].name.last}</span>
-                    <span className="text-xs text-gray-400 ml-2">{testimonials[currentTestimonial].role}</span>
+                    <span className="text-xs text-gray-400 ml-2 border-b-2 border-blue-400 inline-block">{testimonials[currentTestimonial].role}</span>
                   </h4>
                 </div>
               </motion.div>
