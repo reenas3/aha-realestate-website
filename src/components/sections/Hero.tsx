@@ -29,9 +29,9 @@ export default function Hero() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="inline-flex items-center gap-2 rounded-full bg-primary-600/90 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm"
+                className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm"
               >
-                <span className="h-2 w-2 rounded-full bg-accent-500"></span>
+                <span className="h-2 w-2 rounded-full bg-blue-400"></span>
                 Transforming Wollo's Skyline
               </motion.div>
 
@@ -41,8 +41,8 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="mt-6 text-4xl font-black tracking-tight sm:text-6xl lg:text-7xl"
               >
-                <span className="text-accent-500">የእርስዎን</span> <br />
-                <span className="text-primary-400">ራእይ</span> <span className="text-accent-500">ወደ እውነታ እንቀይራለን!</span>
+                <span className="text-blue-500">የእርስዎን</span> <br />
+                <span className="text-primary-400">ራእይ</span> <span className="text-blue-500">ወደ እውነታ እንቀይራለን!</span>
               </motion.h1>
 
               <motion.p
