@@ -10,19 +10,22 @@ export default function Hero() {
       id: 1,
       name: "Mohammed Yassin",
       image: `${import.meta.env.BASE_URL}images/projects/testimonial1.jpeg`,
-      text: "Working with Eng Ahmed was an exceptional experience. His attention to detail and commitment to quality is unmatched."
+      text: "Working with Eng Ahmed was an exceptional experience. His attention to detail and commitment to quality is unmatched.",
+      role: "Business Owner"
     },
     {
       id: 2,
       name: "Mohammed Adem",
       image: `${import.meta.env.BASE_URL}images/projects/testimonial2.JPG`,
-      text: "The professionalism and expertise demonstrated by AHA Construction exceeded our expectations."
+      text: "The professionalism and expertise demonstrated by AHA Construction exceeded our expectations.",
+      role: "Business Owner"
     },
     {
       id: 3,
       name: "Bushira Awol",
       image: `${import.meta.env.BASE_URL}images/projects/testimonial3.JPG`,
-      text: "Eng Ahmed's innovative approach and dedication to excellence made our project a great success."
+      text: "Eng Ahmed's innovative approach and dedication to excellence made our project a great success.",
+      role: "Business Owner"
     }
   ];
 
@@ -59,9 +62,9 @@ export default function Hero() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm"
+                className="inline-flex items-center gap-2 rounded-full bg-green-600 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm"
               >
-                <span className="h-2 w-2 rounded-full bg-blue-400"></span>
+                <span className="h-2 w-2 rounded-full bg-green-400"></span>
                 Transforming Wollo's Skyline
               </motion.div>
 
@@ -188,11 +191,14 @@ export default function Hero() {
                 <img
                   src={testimonials[currentTestimonial].image}
                   alt={testimonials[currentTestimonial].name}
-                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-blue-400"
+                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-green-400"
                 />
                 <div>
                   <p className="text-xs sm:text-sm text-gray-300 italic">"{testimonials[currentTestimonial].text}"</p>
-                  <h4 className="mt-2 text-sm sm:text-base text-white font-semibold">{testimonials[currentTestimonial].name}</h4>
+                  <h4 className="mt-2 text-sm sm:text-base text-white font-semibold">
+                    <span className="text-green-400">{testimonials[currentTestimonial].name}</span>
+                    <span className="text-xs text-gray-400 ml-2">{testimonials[currentTestimonial].role}</span>
+                  </h4>
                 </div>
               </motion.div>
               <div className="mt-3 sm:mt-4 flex justify-center space-x-2">
