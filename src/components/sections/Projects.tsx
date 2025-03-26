@@ -3,22 +3,22 @@ import { MapPinIcon, CalendarIcon, BuildingOfficeIcon } from '@heroicons/react/2
 
 const projects = [
   {
-    title: 'MYS Residential Mansion',
-    description: 'Luxurious residential complex featuring modern amenities and elegant architectural design.',
+    id: 1,
+    title: "MYS Residential Mansion",
+    description: "Luxurious residential complex featuring modern amenities and elegant architectural design. Starting 2026 in Gerba Suburban Area.",
     imageUrl: `${import.meta.env.BASE_URL}images/projects/mysresidence.JPG`,
-    location: 'Gerba Suburban Area',
-    date: 'Starting 2026',
-    type: 'Residential',
-    details: 'Modern residential development with premium finishes',
+    location: "Gerba Suburban Area",
+    status: "Starting 2026",
+    category: "Residential"
   },
   {
-    title: 'SAA Residential Mansion',
-    description: 'Custom-designed residential project combining comfort with contemporary architecture.',
-    imageUrl: `${import.meta.env.BASE_URL}images/projects/seidresidence.JPG`,
-    location: 'Gerba Suburban Area',
-    date: 'Starting 2026',
-    type: 'Residential',
-    details: 'Bespoke residential construction with modern amenities',
+    id: 2,
+    title: "SAA Residential Mansion",
+    description: "Custom-designed residential project combining comfort with contemporary architecture. Starting 2026 in Gerba Suburban Area.",
+    imageUrl: `${import.meta.env.BASE_URL}images/projects/saaresidence.JPG`,
+    location: "Gerba Suburban Area",
+    status: "Starting 2026",
+    category: "Residential"
   },
   {
     title: 'Main Commercial Complex',

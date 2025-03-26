@@ -62,7 +62,7 @@ export default function Hero() {
                 className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm"
               >
                 <span className="h-2 w-2 rounded-full bg-blue-400"></span>
-                Transforming Wollo's Skyline
+                Main Commercial Complex on Progress
               </motion.div>
 
               <motion.h1
@@ -71,8 +71,8 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="mt-4 text-3xl font-black tracking-tight sm:text-5xl lg:text-7xl"
               >
-                <span className="text-black font-extrabold" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>የእርስዎን</span> <br />
-                <span className="text-primary-400">ራእይ</span> <span className="text-black font-extrabold" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>ወደ እውነታ እንቀይራለን!</span>
+                <span className="text-white font-extrabold drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">የእርስዎን</span> <br />
+                <span className="text-primary-400">ራእይ</span> <span className="text-white font-extrabold drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">ወደ እውነታ እንቀይራለን!</span>
               </motion.h1>
 
               <motion.p
@@ -137,7 +137,7 @@ export default function Hero() {
               className="flex flex-col items-center"
             >
               <div className="text-center">
-                <div className="relative w-32 h-32 sm:w-48 sm:h-48 mx-auto">
+                <div className="relative w-48 h-48 sm:w-72 sm:h-72 mx-auto">
                   <img
                     src={`${import.meta.env.BASE_URL}images/eng_ahmed_husse.jpg`}
                     alt="Eng Ahmed Hussen Ahmed"
@@ -148,15 +148,15 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.9 }}
-                  className="mt-3 sm:mt-4 text-center"
+                  className="mt-4 sm:mt-6 text-center"
                 >
-                  <h3 className="text-lg sm:text-xl font-bold text-white">Eng Ahmed Hussen Ahmed</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white">Eng Ahmed Hussen Ahmed</h3>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 1.0 }}
-                  className="mt-4 sm:mt-6"
+                  className="mt-6 sm:mt-8"
                 >
                   <Link
                     to="/profile"
@@ -174,24 +174,37 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.1 }}
-              className="grid grid-cols-3 gap-4"
+              className="relative overflow-hidden rounded-xl bg-white/5 p-4 sm:p-6 backdrop-blur-sm"
             >
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={testimonial.id}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4"
-                >
-                  <div className="flex flex-col items-center">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-16 h-16 rounded-full object-cover border-2 border-blue-400 mb-3"
-                    />
-                    <h4 className="text-sm font-semibold text-white mb-2">{testimonial.name}</h4>
-                    <p className="text-xs text-black font-medium text-center">{testimonial.text}</p>
-                  </div>
+              <motion.div
+                key={currentTestimonial}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="flex items-center space-x-3 sm:space-x-4"
+              >
+                <img
+                  src={testimonials[currentTestimonial].image}
+                  alt={testimonials[currentTestimonial].name}
+                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-blue-400"
+                />
+                <div>
+                  <p className="text-xs sm:text-sm text-gray-300 italic">"{testimonials[currentTestimonial].text}"</p>
+                  <h4 className="mt-2 text-sm sm:text-base text-white font-semibold">{testimonials[currentTestimonial].name}</h4>
                 </div>
-              ))}
+              </motion.div>
+              <div className="mt-3 sm:mt-4 flex justify-center space-x-2">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentTestimonial(index)}
+                    className={`w-2 h-2 rounded-full transition-colors ${
+                      index === currentTestimonial ? 'bg-blue-500' : 'bg-gray-500'
+                    }`}
+                  />
+                ))}
+              </div>
             </motion.div>
           </div>
         </div>
