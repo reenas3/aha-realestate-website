@@ -22,59 +22,61 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-xl text-white"
+            className="max-w-xl text-white flex flex-col justify-between h-full"
           >
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="inline-flex items-center gap-2 rounded-full bg-primary-600/90 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm"
-            >
-              <span className="h-2 w-2 rounded-full bg-accent-500"></span>
-              Transforming Wollo's Skyline
-            </motion.div>
+            <div>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="inline-flex items-center gap-2 rounded-full bg-primary-600/90 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm"
+              >
+                <span className="h-2 w-2 rounded-full bg-accent-500"></span>
+                Transforming Wollo's Skyline
+              </motion.div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="mt-6 text-4xl font-black tracking-tight sm:text-6xl lg:text-7xl"
-            >
-              <span className="text-accent-500">የእርስዎን</span> <br />
-              <span className="text-primary-400">ራእይ</span> <span className="text-accent-500">ወደ እውነታ እንቀይራለን!</span>
-            </motion.h1>
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="mt-6 text-4xl font-black tracking-tight sm:text-6xl lg:text-7xl"
+              >
+                <span className="text-accent-500">የእርስዎን</span> <br />
+                <span className="text-primary-400">ራእይ</span> <span className="text-accent-500">ወደ እውነታ እንቀይራለን!</span>
+              </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="mt-6 text-lg leading-8 text-gray-300"
-            >
-              With over a decade of construction excellence in Dessie, Kombolcha, and Gerba, we bring expertise, 
-              quality, and innovation to every project. From foundation to finish, we're your 
-              trusted partner in construction.
-            </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="mt-6 text-lg leading-8 text-gray-300"
+              >
+                With over a decade of construction excellence in Dessie, Kombolcha, and Gerba, we bring expertise, 
+                quality, and innovation to every project. From foundation to finish, we're your 
+                trusted partner in construction.
+              </motion.p>
 
-            {/* Project Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="mt-12 grid grid-cols-3 gap-8 border-t border-white/20 pt-8"
-            >
-              <div>
-                <div className="text-3xl font-bold text-white">50+</div>
-                <div className="mt-1 text-sm text-gray-300">Projects Completed</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-white">13+</div>
-                <div className="mt-1 text-sm text-gray-300">Years Experience</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-white">100%</div>
-                <div className="mt-1 text-sm text-gray-300">Client Satisfaction</div>
-              </div>
-            </motion.div>
+              {/* Project Stats */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="mt-12 grid grid-cols-3 gap-8 border-t border-white/20 pt-8"
+              >
+                <div>
+                  <div className="text-3xl font-bold text-white">50+</div>
+                  <div className="mt-1 text-sm text-gray-300">Projects Completed</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-white">13+</div>
+                  <div className="mt-1 text-sm text-gray-300">Years Experience</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-white">100%</div>
+                  <div className="mt-1 text-sm text-gray-300">Client Satisfaction</div>
+                </div>
+              </motion.div>
+            </div>
 
             {/* Action Buttons */}
             <motion.div
@@ -107,7 +109,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex flex-col items-center -mt-[9.5rem]"
+            className="flex flex-col items-center justify-between h-full"
           >
             <div className="text-center">
               <div className="relative w-72 h-72 mx-auto">
