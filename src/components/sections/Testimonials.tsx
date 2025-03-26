@@ -26,23 +26,23 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section id="testimonials" className="py-24 bg-gradient-to-b from-gray-50 to-white">
+    <section id="testimonials" className="py-12 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mx-auto max-w-2xl text-center mb-12"
+          className="mx-auto max-w-2xl text-center mb-8"
         >
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Client Testimonials
           </h2>
-          <p className="mt-4 text-lg leading-8 text-gray-600">
+          <p className="mt-3 text-lg leading-8 text-gray-600">
             Hear what our valued clients have to say about their experience working with AHA Construction.
           </p>
         </motion.div>
 
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 sm:gap-12 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.id}
@@ -52,17 +52,17 @@ export default function TestimonialsSection() {
               className="h-full"
             >
               <div className="group h-full flex flex-col relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl">
-                <div className="relative pt-[100%] bg-gray-100">
+                <div className="relative pt-[90%] bg-gray-100">
                   <img
                     src={testimonial.image}
                     alt={`${testimonial.name.first} ${testimonial.name.last}`}
                     className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
-                <div className="flex-1 p-6 flex flex-col">
-                  <div className="flex items-center gap-4 mb-4">
+                <div className="flex-1 p-4 flex flex-col">
+                  <div className="flex items-center gap-3 mb-2">
                     <div>
-                      <h3 className="text-xl font-semibold">
+                      <h3 className="text-lg font-semibold">
                         <span className="text-green-600">{testimonial.name.first}</span>
                         {' '}
                         <span className="text-gray-900">{testimonial.name.last}</span>
@@ -71,7 +71,7 @@ export default function TestimonialsSection() {
                     </div>
                   </div>
                   <blockquote className="flex-1">
-                    <p className="text-base italic text-gray-900 leading-relaxed">"{testimonial.text}"</p>
+                    <p className="text-sm italic text-gray-900 leading-relaxed">"{testimonial.text}"</p>
                   </blockquote>
                 </div>
               </div>

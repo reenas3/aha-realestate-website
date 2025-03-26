@@ -22,7 +22,7 @@ export default function App() {
               <Hero />
               <div className="relative">
                 <div className="container">
-                  <div className="space-y-48 py-32">
+                  <div className="space-y-24 py-24">
                     <About />
                     <Services />
                     <Projects />
