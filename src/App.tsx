@@ -15,10 +15,10 @@ import './index.css'
 export default function App() {
   return (
     <Router basename="/aha-realestate-website">
+      <Navbar />
       <Routes>
         <Route path="/" element={
           <>
-            <Navbar />
             <main id="home">
               <Hero />
               <Services />
