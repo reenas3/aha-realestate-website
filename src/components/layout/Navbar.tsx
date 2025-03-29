@@ -17,27 +17,17 @@ export default function Navbar() {
     }
   }, [isOpen]);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
-    setIsOpen(false);
-
-    // If we're not on the home page, navigate to home first
-    if (location.pathname !== '/') {
-      navigate('/');
-      // Wait for navigation to complete before scrolling
-      setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
+    if (id === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setIsOpen(false);
       return;
     }
-
-    // If we're already on the home page, just scroll
-    const element = document.getElementById(sectionId);
+    const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false);
     }
   };
 
@@ -53,7 +43,7 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-1 md:flex">
-          <Link to="/" className="px-4 py-2 text-white hover:text-white/80">
+          <Link to="/" className="px-4 py-2 text-white hover:text-white/80" onClick={(e) => handleNavClick(e, 'home')}>
             Home
           </Link>
           <a href="#about" className="px-4 py-2 text-white hover:text-white/80" onClick={(e) => handleNavClick(e, 'about')}>
@@ -141,7 +131,7 @@ export default function Navbar() {
                 <Link 
                   to="/" 
                   className="text-white hover:text-white/80 transition-colors duration-200 text-lg" 
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => handleNavClick(e, 'home')}
                 >
                   Home
                 </Link>

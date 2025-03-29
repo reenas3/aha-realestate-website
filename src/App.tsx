@@ -10,7 +10,6 @@ import Profile from './routes/Profile'
 import ComingSoon from './routes/ComingSoon'
 import TestimonialsSection from './components/sections/Testimonials'
 import News from './components/sections/News'
-import AdminNews from './routes/AdminNews'
 import './index.css'
 
 export default function App() {
@@ -19,28 +18,21 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={
-          <div className="relative min-h-screen bg-white">
-            <main className="relative">
+          <>
+            <Navbar />
+            <main id="home">
               <Hero />
-              <div className="relative">
-                <div className="container">
-                  <div className="space-y-24 py-24">
-                    <About />
-                    <Services />
-                    <Projects />
-                    <News />
-                    <TestimonialsSection />
-                    <Contact />
-                  </div>
-                </div>
-              </div>
+              <Services />
+              <Projects />
+              <News />
+              <TestimonialsSection />
+              <Contact />
             </main>
             <Footer />
-          </div>
+          </>
         } />
         <Route path="/profile" element={<Profile />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
-        <Route path="/admin/news" element={<AdminNews />} />
       </Routes>
     </Router>
   )

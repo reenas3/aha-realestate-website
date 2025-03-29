@@ -1,26 +1,32 @@
 import { motion } from 'framer-motion';
 import { CalendarIcon } from '@heroicons/react/24/outline';
-import { useState, useEffect } from 'react';
 
-interface NewsItem {
-  id: number;
-  date: string;
-  title: string;
-  content: string;
-  tag: string;
-}
+// This can be moved to a separate data file later for easier updates
+const newsItems = [
+  {
+    id: 1,
+    date: 'March 20, 2024',
+    title: 'Expanding Our Services to Bati',
+    content: 'We are excited to announce the expansion of our construction services to Bati area. This strategic move allows us to better serve our growing client base in the region.',
+    tag: 'Announcement'
+  },
+  {
+    id: 2,
+    date: 'March 15, 2024',
+    title: 'Successfully Completed Kombolcha Commercial Center',
+    content: 'We are proud to announce the successful completion of the Kombolcha Commercial Center project, delivered on time and exceeding quality expectations.',
+    tag: 'Project Update'
+  },
+  {
+    id: 3,
+    date: 'March 10, 2024',
+    title: 'New Partnership with Local Suppliers',
+    content: 'We have established new partnerships with local suppliers to ensure sustainable and cost-effective material sourcing for all our projects.',
+    tag: 'Partnership'
+  }
+];
 
 export default function News() {
-  const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
-
-  useEffect(() => {
-    // Load news items from localStorage
-    const savedNews = localStorage.getItem('newsItems');
-    if (savedNews) {
-      setNewsItems(JSON.parse(savedNews));
-    }
-  }, []);
-
   return (
     <section id="news" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
