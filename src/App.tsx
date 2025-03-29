@@ -10,6 +10,7 @@ import Profile from './routes/Profile'
 import ComingSoon from './routes/ComingSoon'
 import TestimonialsSection from './components/sections/Testimonials'
 import News from './components/sections/News'
+import Admin from './routes/Admin'
 import './index.css'
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
         } />
         <Route path="/profile" element={<Profile />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </Router>
   )

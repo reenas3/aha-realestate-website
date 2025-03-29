@@ -6,6 +6,8 @@ import {
   MapPinIcon,
   ClockIcon,
 } from '@heroicons/react/24/outline';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '../../firebase/config';
 
 const contactInfo = [
   {
@@ -37,12 +39,8 @@ export default function Contact() {
     phone: '',
     message: '',
   });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: Implement form submission logic
-    console.log('Form submitted:', formData);
-  };
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -50,6 +48,33 @@ export default function Contact() {
       ...prev,
       [name]: value
     }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      await addDoc(collection(db, 'messages'), {
+        ...formData,
+        timestamp: serverTimestamp(),
+        status: 'unread'
+      });
+
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -81,7 +106,14 @@ export default function Contact() {
             viewport={{ once: true }}
             className="lg:pr-8 lg:pt-4"
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <motion.form
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              onSubmit={handleSubmit}
+              className="space-y-6"
+            >
               <div>
                 <label htmlFor="name" className="block text-sm font-medium leading-6 text-gray-900">
                   Name
@@ -150,12 +182,40 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div>
-                <button type="submit" className="btn w-full">
-                  Send Message
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`px-6 py-3 rounded-full text-white font-medium shadow-md transition-all
+                    ${isSubmitting 
+                      ? 'bg-gray-400 cursor-not-allowed' 
+                      : 'bg-green-600 hover:bg-green-700 hover:shadow-lg'
+                    }`}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </div>
-            </form>
+
+              {submitStatus === 'success' && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="text-center text-green-600 font-medium"
+                >
+                  Thank you! Your message has been sent successfully.
+                </motion.div>
+              )}
+
+              {submitStatus === 'error' && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="text-center text-red-600 font-medium"
+                >
+                  Sorry, there was an error sending your message. Please try again.
+                </motion.div>
+              )}
+            </motion.form>
           </motion.div>
 
           {/* Contact Information */}
