@@ -14,7 +14,7 @@ const projects = [
   {
     title: 'MA Residential Mansion',
     description: 'A luxurious residential mansion showcasing modern architectural design and premium finishes.',
-    imageUrl: `${import.meta.env.BASE_URL}images/projects/project1.jpg`,
+    imageUrl: `${import.meta.env.BASE_URL}images/projects/seidresidence.JPG`,
     location: 'Dessie',
     date: 'Starting 2026',
     type: 'Residential',
